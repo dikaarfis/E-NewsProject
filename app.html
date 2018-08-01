@@ -1,0 +1,21 @@
+<ion-menu [content]="content" side="left">
+    <ion-header>
+        <div style="width: 100%; height: auto; border:1px solid #000;">
+            <img src="../assets/imgs/enews2.png" alt="">
+        </div>
+    </ion-header>
+
+    <ion-content>
+        <ion-list detail-none>
+            <ion-list-header>
+                <h3>Kategori</h3>
+            </ion-list-header>
+            <button menuClose ion-item *ngFor="let page of pages" (click)="openPage(page)">
+                {{ page.title }}
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+
+<ion-nav #content [root]="rootPage" swipeBackEnabled="true"></ion-nav>

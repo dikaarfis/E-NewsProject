@@ -1,0 +1,19 @@
+<ion-header no-border>
+ 
+  <ion-navbar color="col">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>E-News Nusantara</ion-title>
+  </ion-navbar>
+ 
+</ion-header>
+ 
+<ion-content>
+ 
+  <super-tabs tabsPlacement="top" toolbarBackground="col" toolbarColor="col-2" indicatorColor="col-2"
+  (tabSelect)="onTabSelect($event)">
+  <super-tab *ngFor="let page of pages" [root]="page.pageName" [title]="page.title" [id]="page.id"></super-tab>
+</super-tabs>
+ 
+</ion-content>
